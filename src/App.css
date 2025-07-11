@@ -1,13 +1,22 @@
 /* General Styles */
+:root {
+  --primary-color: #007bff; /* Bright Blue */
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --card-bg-color: #ffffff;
+  --border-color: #dee2e6;
+  --header-bg: rgba(255, 255, 255, 0.85);
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .App {
@@ -15,33 +24,67 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #ddd;
+  padding: 100px 20px;
 }
 
 h1, h2, h3 {
-  color: #333;
+  font-weight: 900;
 }
 
 h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Fun underline for section titles */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--primary-color);
+    opacity: 0.6;
+    border-radius: 4px;
+}
+
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 7px 25px rgba(0, 123, 255, 0.3);
 }
 
 /* Header */
 .header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header nav ul {
@@ -50,17 +93,24 @@ h2 {
   margin: 0;
   display: flex;
   justify-content: center;
-}
-
-.header nav ul li {
-  margin: 0 15px;
+  gap: 15px;
 }
 
 .header nav ul li a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
 }
+
+.header nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 
 /* Home Section */
 .home {
@@ -68,52 +118,108 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background: #555;
-  color: white;
+  min-height: 90vh;
+  padding: 0 20px;
 }
 
 .home h1 {
-    font-size: 4em;
+    font-size: 5.5em;
     margin: 0;
-    color: white;
+    color: var(--text-color);
+    line-height: 1.1;
 }
 
 .home p {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 10px;
 }
 
 /* About Section */
-.about p {
+.about {
+    background-color: var(--card-bg-color);
+    border-radius: 16px;
+    padding: 60px 40px;
+}
+.about-content {
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 2;
+    font-size: 1.2em;
+    background-color: #f1f3f5; /* Code block style */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
 }
 
 /* Projects Section */
 .projects .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  margin-bottom: 50px;
 }
 
 .project {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project .project-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
 }
 
 .project img {
-    max-width: 100%;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .project h3 {
     margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.project p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
 }
 
 /* Skills Section */
@@ -123,15 +229,30 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
+/* "Block" or "Puzzle piece" style for skills */
 .skills li {
-  background: #333;
-  color: white;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
+  background: var(--card-bg-color);
+  color: var(--text-color);
+  padding: 15px 30px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 4px 4px 0px #d0d0d0; /* "Pixel" shadow */
 }
+
+.skills li:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #d0d0d0;
+}
+
 
 /* Contact Section */
 .contact form {
@@ -139,28 +260,41 @@ h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .contact input, .contact textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 18px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
 }
 
 .contact button {
-  background: #333;
+  background: var(--primary-color);
   color: white;
-  padding: 10px;
+  padding: 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
 }
+
 
 /* Footer */
 .footer {
-  background: #333;
-  color: white;
-  padding: 20px;
-  margin-top: 20px;
+  background: #e9ecef;
+  color: #6c757d;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-top: 1px solid var(--border-color);
 }
