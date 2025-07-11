@@ -4,7 +4,7 @@ function Home() {
   return (
     <section id="home" className="home">
       <h1>あなたの名前</h1>
-      <p>ウェブデベロッパー | デザイナー | クリエイター</p>
+      <p>Game Programmer</p>
     </section>
   );
 }

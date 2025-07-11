@@ -1,6 +1,6 @@
 import React from 'react';
 
-const mySkills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Python', 'Figma'];
+const mySkills = ['C++', 'HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Python', 'Figma'];
 
 function Skills() {
   return (
