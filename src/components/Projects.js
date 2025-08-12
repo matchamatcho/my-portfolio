@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// あなたのGitHubプロジェクト情報をここに記述します
-const myProjects = [
+// このデータは他のファイルからも参照できるようにエクスポートしておきます
+export const myProjects = [
   {
     id: 1,
     title: 'VR頭部回転増幅ソフトウェア',
@@ -27,8 +28,8 @@ const myProjects = [
     id: 4,
     title: '2Dシューティング',
     description: 'シューティングゲーム！',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', 
-    link: 'https://github.com/matchamatcho/CppShooting' 
+    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png',
+    link: 'https://github.com/matchamatcho/CppShooting'
   }
 ];
 
@@ -40,14 +41,16 @@ function Projects() {
         <div className="project-list">
           {myProjects.map(project => (
             <div key={project.id} className="project">
-              <div className="project-image-container">
-                <img src={project.imageUrl} alt={project.title} />
-              </div>
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
-              </div>
+              <Link to={`/project/${project.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="project-image-container">
+                  <img src={project.imageUrl} alt={project.title} />
+                </div>
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <span className="button">詳細を見る</span>
+                </div>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,37 +1,37 @@
 import React from 'react';
 
-// スキルとレベルをここに記述します (0から100の間の数値)
+// スキルと経験の種類をここに記述します
+// 経験の種類: 実務経験, チーム開発, 個人開発, 学習経験
 const mySkills = [
-  { name: 'C++', level: 85 },
-  { name: 'C#', level: 80 },
-  { name: 'Unity', level: 75 },
-  { name: 'Unreal Engine 5', level: 70 },
-  { name: 'DirectX11', level: 65 },
-  { name: 'HTML', level: 90 },
-  { name: 'CSS', level: 80 },
-  { name: 'JavaScript', level: 75 },
-  { name: 'React', level: 70 },
-  { name: 'Node.js', level: 60 },
-  { name: 'Python', level: 80 },
-  { name: 'Figma', level: 65 },
+  { name: 'C++', experience: ['学習経験', '個人開発'] },
+  { name: 'C#', experience: [ '個人開発'] },
+  { name: 'C', experience: ['学習経験'] },
+  { name: 'Python', experience: ['学習経験', '個人開発','チーム開発'] },
+  { name: 'Unity', experience: ['学習経験', '個人開発'] },
+  { name: 'Unreal Engine 5', experience: ['個人開発'] },
+  { name: 'DirectX11', experience: [ '個人開発'] },
+  { name: 'HTML', experience: [ 'チーム開発'] },
+  { name: 'CSS', experience: ['チーム開発'] },
+  { name: 'JavaScript', experience: ['チーム開発'] },
+  { name: 'React', experience: ['チーム開発'] },
+  { name: 'Node.js', experience: ['チーム開発'] },
+  { name: 'Figma', experience: ['チーム開発'] },
 ];
 
 function Skills() {
   return (
     <section id="skills" className="skills">
       <h2>Skills</h2>
-      <div className="skill-bars">
+      <div className="skill-list">
         {mySkills.map(skill => (
-          <div key={skill.name} className="skill-bar">
-            <div className="skill-info">
-              <span className="skill-name">{skill.name}</span>
-              <span className="skill-level">{skill.level}%</span>
-            </div>
-            <div className="skill-gauge-background">
-              <div
-                className="skill-gauge-level"
-                style={{ width: `${skill.level}%` }}
-              ></div>
+          <div key={skill.name} className="skill-item">
+            <span className="skill-name">{skill.name}</span>
+            <div className="skill-experience-container">
+              {skill.experience.map(exp => (
+                <span key={exp} className={`skill-experience ${exp.replace(/\s+/g, '-').toLowerCase()}`}>
+                  {exp}
+                </span>
+              ))}
             </div>
           </div>
         ))}
