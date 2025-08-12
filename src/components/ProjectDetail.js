@@ -46,10 +46,15 @@ function ProjectDetail() {
             </ul>
         </>
       )}
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className="button">
-        GitHubでプロジェクトを見る
-      </a>
-      <br />
+      {/* ↓↓↓ ボタンをdivで囲み、「動画を見る」ボタンを追加しました ↓↓↓ */}
+      <div className="project-detail-buttons">
+        <a href={project.link} target="_blank" rel="noopener noreferrer" className="button">
+          GitHubでプロジェクトを見る
+        </a>
+        <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
+          動画を見る
+        </a>
+      </div>
       <Link to="/" className="button" style={{marginTop: '20px'}}>
         ポートフォリオに戻る
       </Link>

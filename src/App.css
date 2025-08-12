@@ -339,3 +339,44 @@ h2::after {
   margin-top: 60px;
   border-top: 1px solid var(--border-color);
 }
+
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* ボタン用のスペースを確保するために padding-bottom を調整 */
+    padding-bottom: 20px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-around; /* ボタンを均等に配置 */
+  padding: 0 20px 20px; /* 下部に余白を追加 */
+  gap: 10px; /* ボタン間のスペース */
+}
+
+.project-buttons .button {
+  flex: 1; /* ボタンが均等に幅を持つようにする */
+  padding: 10px 15px; /* ボタンのサイズを少し小さく調整 */
+  font-size: 1em;
+}
+
+.button.button-secondary {
+  background-color: #6c757d; /* グレー系の色 */
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+}
+
+.button.button-secondary:hover {
+  background-color: #5a6268;
+  box-shadow: 0 7px 25px rgba(108, 117, 125, 0.3);
+}
+
+.project-buttons .button {
+  color: white;
+}
+
+.project-detail .button {
+    color: white;
+}

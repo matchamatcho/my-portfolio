@@ -8,7 +8,8 @@ export const myProjects = [
     title: 'VR頭部回転増幅ソフトウェア',
     description: '研究で用いました。VRリダイレクション（頭部回転増幅）を使えます。',
     imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
-    link: 'https://github.com/matchamatcho/projectAHR'
+    link: 'https://github.com/matchamatcho/projectAHR',
+    videoUrl:'https://drive.google.com/file/d/1DZC52iGFlGCLRTLL5z6Hy6wa_3LhL6lq/view?usp=sharing'
   },
   {
     id: 2,
@@ -48,9 +49,16 @@ function Projects() {
                 <div className="project-content">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <span className="button">詳細を見る</span>
                 </div>
               </Link>
+              <div className="project-buttons">
+                <Link to={`/project/${project.id}`} className="button">
+                  詳細を見る
+                </Link>
+                <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
+                  動画を見る
+                </a>
+              </div>
             </div>
           ))}
         </div>
