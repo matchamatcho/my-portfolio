@@ -9,7 +9,7 @@ export const myProjects = [
     description: 'C++を用いて作成したCUIゲームです。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
     imageUrl: process.env.PUBLIC_URL + '/images/rightdown.png', // プロジェクトのスクリーンショットなどに差し替えてください
     link: '',
-    videoUrl:'https://drive.google.com/file/d/1DZC52iGFlGCLRTLL5z6Hy6wa_3LhL6lq/view?usp=sharing'
+    videoUrl:'https://drive.google.com/file/d/1Jb2TrvFOz4uPwrRVwsvxlDto0dq-Ak1n/view?usp=sharing'
   },
   {
     id: 1,
