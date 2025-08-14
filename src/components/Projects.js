@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 // このデータは他のファイルからも参照できるようにエクスポートしておきます
 export const myProjects = [
   {
+    id: 5,
+    title: 'CUI移動ゲーム',
+    description: 'C++を用いて作成したCUIゲームです。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
+    imageUrl: process.env.PUBLIC_URL + '/images/rightdown.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    link: '',
+    videoUrl:'https://drive.google.com/file/d/1DZC52iGFlGCLRTLL5z6Hy6wa_3LhL6lq/view?usp=sharing'
+  },
+  {
     id: 1,
     title: 'VR頭部回転増幅ソフトウェア',
     description: '研究で用いました。VRリダイレクション（頭部回転増幅）を使えます。',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    imageUrl: process.env.PUBLIC_URL + '/images/vrredirection.jpg', // プロジェクトのスクリーンショットなどに差し替えてください
     link: 'https://github.com/matchamatcho/projectAHR',
     videoUrl:'https://drive.google.com/file/d/1DZC52iGFlGCLRTLL5z6Hy6wa_3LhL6lq/view?usp=sharing'
   },
@@ -15,22 +23,25 @@ export const myProjects = [
     id: 2,
     title: '〇ai',
     description: '1週間ゲームジャムで作ったゲームです。「〇ai」の〇に入れて単語が出来るアルファベットに当たったら大きくなり、それ以外は当たったら小さくなる。ある程度小さくなったらゲームオーバー！',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
-    link: 'https://github.com/matchamatcho/magario' // あなたのプロジェクトURLに書き換えてください
+    imageUrl: process.env.PUBLIC_URL + '/images/magario.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    link: 'https://github.com/matchamatcho/magario' ,// あなたのプロジェクトURLに書き換えてください
+    videoUrl:'https://drive.google.com/file/d/150wgRVDllgDNXIIyi78qSRkPMOep6D9f/view?usp=drive_link'
   },
   {
     id: 3,
     title: 'トラップゲーム',
     description: 'トラップを避けてゴールを目指す！',
     imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
-    link: 'https://github.com/matchamatcho/3Dtrapgame' // あなたのプロジェクトURLに書き換えてください
+    link: 'https://github.com/matchamatcho/3Dtrapgame' ,// あなたのプロジェクトURLに書き換えてください
+    videoUrl:'https://drive.google.com/file/d/1vJOc9o2_P5Gpdhd773hiHOQEpGVK_qGZ/view?usp=drive_link'
   },
   {
     id: 4,
     title: '2Dシューティング',
     description: 'シューティングゲーム！',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png',
-    link: 'https://github.com/matchamatcho/CppShooting'
+    imageUrl: process.env.PUBLIC_URL + '/images/cppshooting.png',
+    link: 'https://github.com/matchamatcho/CppShooting',
+    videoUrl:'https://drive.google.com/file/d/1xHnbwTSZqHUcgexHgE1Q-LjwNYTgKFJM/view?usp=drive_link'
   }
 ];
 
