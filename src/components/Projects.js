@@ -31,7 +31,7 @@ export const myProjects = [
     id: 3,
     title: 'トラップゲーム',
     description: 'トラップを避けてゴールを目指す！',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    imageUrl: process.env.PUBLIC_URL + '/images/trapgame.png', // プロジェクトのスクリーンショットなどに差し替えてください
     link: 'https://github.com/matchamatcho/3Dtrapgame' ,// あなたのプロジェクトURLに書き換えてください
     videoUrl:'https://drive.google.com/file/d/1vJOc9o2_P5Gpdhd773hiHOQEpGVK_qGZ/view?usp=drive_link'
   },
