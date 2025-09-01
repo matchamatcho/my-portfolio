@@ -6,6 +6,13 @@
   --card-bg-color: #ffffff;
   --border-color: #dee2e6;
   --header-bg: rgba(255, 255, 255, 0.85);
+
+  /* Skill Experience Colors */
+  --exp-jitsumu: #28a745; /* 実務経験 (Green) */
+  --exp-team: #17a2b8;   /* チーム開発 (Cyan) */
+  --exp-kojin: #ffc107;   /* 個人開発 (Yellow) */
+  --exp-gakushu: #6c757d; /* 学習経験 (Gray) */
+  --exp-shikaku: #fd7e14; /* 資格取得 (Orange) */
 }
 
 body {
@@ -231,41 +238,61 @@ h2::after {
 }
 
 /* Skills Section */
-.skills .skill-bars {
+.skills .skill-list {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
-.skill-bar {
-  text-align: left;
-}
-
-.skill-info {
+.skill-item {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  align-items: center;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex-grow: 1; /* Allow items to grow */
+  min-width: 200px; /* Minimum width for each skill item */
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.skill-name {
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  margin-right: auto; /* Push labels to the right */
 }
 
-.skill-gauge-background {
-  background-color: #e9ecef;
-  border-radius: 8px;
-  height: 12px;
-  overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+.skill-experience-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; /* Allow labels to wrap */
+  justify-content: flex-end; /* Align labels to the right */
 }
 
-.skill-gauge-level {
-  background-color: var(--primary-color);
-  height: 100%;
-  border-radius: 8px;
-  transition: width 0.8s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+.skill-experience {
+  font-size: 0.9em;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  white-space: nowrap; /* Prevent label text from wrapping */
 }
+
+/* Label Colors */
+.skill-experience.実務経験 { background-color: var(--exp-jitsumu); }
+.skill-experience.チーム開発 { background-color: var(--exp-team); }
+.skill-experience.個人開発 { background-color: var(--exp-kojin); }
+.skill-experience.学習経験 { background-color: var(--exp-gakushu); }
+.skill-experience.資格取得 { background-color: var(--exp-shikaku); }
 
 
 /* Contact Section */
@@ -311,4 +338,45 @@ h2::after {
   padding: 40px 20px;
   margin-top: 60px;
   border-top: 1px solid var(--border-color);
+}
+
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* ボタン用のスペースを確保するために padding-bottom を調整 */
+    padding-bottom: 20px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-around; /* ボタンを均等に配置 */
+  padding: 0 20px 20px; /* 下部に余白を追加 */
+  gap: 10px; /* ボタン間のスペース */
+}
+
+.project-buttons .button {
+  flex: 1; /* ボタンが均等に幅を持つようにする */
+  padding: 10px 15px; /* ボタンのサイズを少し小さく調整 */
+  font-size: 1em;
+}
+
+.button.button-secondary {
+  background-color: #6c757d; /* グレー系の色 */
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+}
+
+.button.button-secondary:hover {
+  background-color: #5a6268;
+  box-shadow: 0 7px 25px rgba(108, 117, 125, 0.3);
+}
+
+.project-buttons .button {
+  color: white;
+}
+
+.project-detail .button {
+    color: white;
 }
