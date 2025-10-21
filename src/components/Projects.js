@@ -14,7 +14,7 @@ export const myProjects = [
   {
     id: 1,
     title: 'VR頭部回転増幅ソフトウェア',
-    description: '研究で用いました。VRリダイレクション（頭部回転増幅）を使えます。',
+    description: 'Unityで制作しました。研究で実験をおこなうために作成しました。VRリダイレクション（頭部回転増幅）を使えます。',
     imageUrl: process.env.PUBLIC_URL + '/images/vrredirection.jpg', // プロジェクトのスクリーンショットなどに差し替えてください
     link: 'https://github.com/matchamatcho/projectAHR',
     videoUrl:'https://drive.google.com/file/d/1DZC52iGFlGCLRTLL5z6Hy6wa_3LhL6lq/view?usp=sharing'
@@ -30,7 +30,7 @@ export const myProjects = [
   {
     id: 3,
     title: 'トラップゲーム',
-    description: 'トラップを避けてゴールを目指す！',
+    description: 'UE5で制作しました。トラップを避けてゴールを目指します。トラップアドベンチャーを参考にし、3Dゲームを作成しました。',
     imageUrl: process.env.PUBLIC_URL + '/images/trapgame.png', // プロジェクトのスクリーンショットなどに差し替えてください
     link: 'https://github.com/matchamatcho/3Dtrapgame' ,// あなたのプロジェクトURLに書き換えてください
     videoUrl:'https://drive.google.com/file/d/1vJOc9o2_P5Gpdhd773hiHOQEpGVK_qGZ/view?usp=drive_link'
@@ -38,7 +38,7 @@ export const myProjects = [
   {
     id: 4,
     title: '2Dシューティング',
-    description: 'シューティングゲーム！',
+    description: 'C++を用いて制作したシューティングゲームです。C++の学習をするために制作しました。クラス設計を意識しています。directx11を用いて描画しています。',
     imageUrl: process.env.PUBLIC_URL + '/images/cppshooting.png',
     link: 'https://github.com/matchamatcho/CppShooting',
     videoUrl:'https://drive.google.com/file/d/1xHnbwTSZqHUcgexHgE1Q-LjwNYTgKFJM/view?usp=drive_link'

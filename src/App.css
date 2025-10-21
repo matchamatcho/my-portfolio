@@ -380,3 +380,27 @@ h2::after {
 .project-detail .button {
     color: white;
 }
+
+.project-detail ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  list-style-position: inside; /* 箇条書きの点を内側に配置 */
+}
+
+.project-detail li {
+  margin-bottom: 5px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.project-detail-buttons {
+  display: flex;
+  gap: 15px; /* ボタン間のスペース */
+  margin: 20px 0;
+  flex-wrap: wrap; /* 画面が狭い時に折り返し */
+  justify-content: center; /* ボタンを中央寄せ */
+}
+
+.project-detail-buttons .button {
+  flex: 0 1 auto; /* ボタンのサイズを自動調整 */
+}
