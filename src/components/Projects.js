@@ -4,9 +4,16 @@ import { Link } from 'react-router-dom';
 // このデータは他のファイルからも参照できるようにエクスポートしておきます
 export const myProjects = [
   {
+    id: 7,
+    title: 'BirtRacing',
+    description: '鳥を操作するレースゲームを作成しています。UE5で開発中です。',
+    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    link:'https://github.com/matchamatcho/BirdRacing'
+
+  },{
     id: 5,
     title: 'CUI移動ゲーム',
-    description: 'C++を用いて作成したCUIゲームです。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
+    description: 'C++を用いて作成したCUIゲームです。C++の機能の学習を目的としました。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
     imageUrl: process.env.PUBLIC_URL + '/images/rightdown.png', // プロジェクトのスクリーンショットなどに差し替えてください
     videoUrl:'https://drive.google.com/file/d/1Jb2TrvFOz4uPwrRVwsvxlDto0dq-Ak1n/view?usp=sharing'
   },
