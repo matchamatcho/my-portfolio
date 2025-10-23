@@ -52,13 +52,21 @@ function ProjectDetail() {
       )}
       {/* ↓↓↓ ボタンをdivで囲み、「動画を見る」ボタンを追加しました ↓↓↓ */}
       <div className="project-detail-buttons">
-        <a href={project.link} target="_blank" rel="noopener noreferrer" className="button">
+        {project.link&&(<a href={project.link} target="_blank" rel="noopener noreferrer" className="button">
           GitHubでプロジェクトを見る
-        </a>
-        <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
+        </a>)}
+        {project.videoUrl&&(<a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
           動画を見る
-        </a>
+        </a>)}
       </div>
+      <div className="project-detail-buttons">
+        {project.unityRoomUrl && (
+          <a href={project.unityRoomUrl} target="_blank" rel="noopener noreferrer" className="button">
+            unityroomで遊ぶ
+          </a>
+        )}
+      </div>
+
       <Link to="/" className="button" style={{marginTop: '20px'}}>
         ポートフォリオに戻る
       </Link>

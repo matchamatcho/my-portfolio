@@ -8,7 +8,6 @@ export const myProjects = [
     title: 'CUI移動ゲーム',
     description: 'C++を用いて作成したCUIゲームです。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
     imageUrl: process.env.PUBLIC_URL + '/images/rightdown.png', // プロジェクトのスクリーンショットなどに差し替えてください
-    link: '',
     videoUrl:'https://drive.google.com/file/d/1Jb2TrvFOz4uPwrRVwsvxlDto0dq-Ak1n/view?usp=sharing'
   },
   {
@@ -25,7 +24,8 @@ export const myProjects = [
     description: '1週間ゲームジャムで作ったゲームです。「〇ai」の〇に入れて単語が出来るアルファベットに当たったら大きくなり、それ以外は当たったら小さくなる。ある程度小さくなったらゲームオーバー！',
     imageUrl: process.env.PUBLIC_URL + '/images/magario.png', // プロジェクトのスクリーンショットなどに差し替えてください
     link: 'https://github.com/matchamatcho/magario' ,// あなたのプロジェクトURLに書き換えてください
-    videoUrl:'https://drive.google.com/file/d/150wgRVDllgDNXIIyi78qSRkPMOep6D9f/view?usp=drive_link'
+    videoUrl:'https://drive.google.com/file/d/150wgRVDllgDNXIIyi78qSRkPMOep6D9f/view?usp=drive_link',
+    unityRoomUrl:'https://unityroom.com/games/magario'
   },
   {
     id: 3,
@@ -42,6 +42,14 @@ export const myProjects = [
     imageUrl: process.env.PUBLIC_URL + '/images/cppshooting.png',
     link: 'https://github.com/matchamatcho/CppShooting',
     videoUrl:'https://drive.google.com/file/d/1xHnbwTSZqHUcgexHgE1Q-LjwNYTgKFJM/view?usp=drive_link'
+  },
+  {
+    id: 6,
+    title: '鏡くん',
+    description: 'Unityを用いて初めてゲームを開発しました。敵の動きに自分のキャラクターを合わせ続けるゲームです',
+    imageUrl: process.env.PUBLIC_URL + '/images/Kagamikun.png',
+    link: 'https://github.com/matchamatcho/Kagamikun',
+    unityRoomUrl:'https://unityroom.com/games/kagamikun'
   }
 ];
 
@@ -66,9 +74,19 @@ function Projects() {
                 <Link to={`/project/${project.id}`} className="button">
                   詳細を見る
                 </Link>
-                <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
+                {project.videoUrl&&(<a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
                   動画を見る
-                </a>
+                </a>)}
+              </div>
+              <div className="project-buttons">
+                {project.link&&(<a href={project.link} target="_blank" rel="noopener noreferrer" className="button">
+          GitHubでプロジェクトを見る
+        </a>)}
+                {project.unityRoomUrl && (
+                  <a href={project.unityRoomUrl} target="_blank" rel="noopener noreferrer" className="button">
+                    unityroomで遊ぶ
+                  </a>
+                )}
               </div>
             </div>
           ))}
