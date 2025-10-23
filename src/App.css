@@ -37,7 +37,7 @@ main {
 }
 
 section {
-  padding: 100px 20px;
+  padding: 10px 20px;
 }
 
 h1, h2, h3 {
@@ -147,7 +147,7 @@ h2::after {
 .about {
     background-color: var(--card-bg-color);
     border-radius: 16px;
-    padding: 60px 40px;
+    padding: 6px 40px;
 }
 .about-content {
     max-width: 800px;
@@ -164,7 +164,7 @@ h2::after {
 /* Projects Section */
 .projects .project-list-wrapper {
   overflow-x: auto;
-  padding-bottom: 20px;
+  padding-bottom: 2px;
   -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
 }
 
@@ -173,7 +173,7 @@ h2::after {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 35px;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 
 .project {

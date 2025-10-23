@@ -35,7 +35,7 @@ const Publications = () => {
   };
 
   return (
-    <section className="px-4 py-12 bg-gray-50">
+    <section className="px-4 py-6 bg-gray-50">
       <h2 className="text-3xl font-bold mb-8">Publications</h2>
 
       {/* 査読無し */}
