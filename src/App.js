@@ -10,6 +10,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ProjectDetail from "./components/ProjectDetail";
+import CompetitiveProgramming from "./components/CompetitiveProgramming";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                   <About />
                   <Projects />
                   <Publications />
+                  <CompetitiveProgramming />
                   <Skills />
                   {/* <Contact /> */}
                 </>
