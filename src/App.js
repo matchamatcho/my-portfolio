@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
+import News from "./components/News";
 import Projects from "./components/Projects";
 import Publications from "./components/Publications";
 import Skills from "./components/Skills";
@@ -25,6 +26,7 @@ function App() {
                 <>
                   <Home />
                   <About />
+                  {/* <News /> */}
                   <Projects />
                   <Publications />
                   <CompetitiveProgramming />
