@@ -26,10 +26,10 @@ function App() {
                 <>
                   <Home />
                   <About />
-                  {/* <News /> */}
                   <Projects />
                   <Publications />
                   <CompetitiveProgramming />
+                  <News />
                   <Skills />
                   {/* <Contact /> */}
                 </>

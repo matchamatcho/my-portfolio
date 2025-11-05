@@ -4,8 +4,11 @@ const News = () => {
   const newsItems = [
     
     {
+      date: "2025/11",
+      title: "JPHacks award dayに参加しました",
+    },{
       date: "2025/10",
-      title: "JPHacksに参加しました",
+      title: "JPHacks（札幌会場）に参加しました",
     },
     {
       date: "2025/09",
