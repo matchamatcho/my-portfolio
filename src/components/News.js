@@ -12,7 +12,7 @@ const News = () => {
     },
     {
       date: "2025/09",
-      title: "HCI研究会で発表を行いました",
+      title: "HCI研究会で発表を行いました（学生奨励賞）",
     },
     {
       date: "2025/08",
@@ -33,6 +33,10 @@ const News = () => {
     {
       date: "2025/05",
       title: "Beginner's Hackathonに参加しました",
+    },
+    {
+      date: "2025/04",
+      title: "Unity 1週間ゲームジャムに参加しました",
     },
     {
       date: "2024/11",
