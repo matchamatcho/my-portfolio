@@ -4,12 +4,15 @@ const News = () => {
   const newsItems = [
     
     {
+      date: "2025/11",
+      title: "JPHacks award dayに参加しました",
+    },{
       date: "2025/10",
-      title: "JPHacksに参加しました",
+      title: "JPHacks（札幌会場）に参加しました",
     },
     {
       date: "2025/09",
-      title: "HCI研究会で発表を行いました",
+      title: "HCI研究会で発表を行いました（学生奨励賞）",
     },
     {
       date: "2025/08",
@@ -30,6 +33,10 @@ const News = () => {
     {
       date: "2025/05",
       title: "Beginner's Hackathonに参加しました",
+    },
+    {
+      date: "2025/04",
+      title: "Unity 1週間ゲームジャムに参加しました",
     },
     {
       date: "2024/11",
