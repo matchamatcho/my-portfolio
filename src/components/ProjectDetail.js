@@ -15,6 +15,9 @@ function ProjectDetail() {
     1: {
       extendedDescription: 'このVR頭部回転増幅ソフトウェアは、ユーザーの首の動きを仮想空間内で増幅することで、より少ない身体的な動きで広い視野を確保できるように設計されています。特に、身体的な制約があるユーザーや、限られたプレイスペースでのVR体験を向上させることを目的としています。UnityとC#を使用して開発しました。',
       technologies: ['Unity', 'C#', 'VR','META Core SDK'],
+      conferenceUrl: 'https://ipsj.ixsq.nii.ac.jp/records/2003781', // 学会のURL
+      paperUrl: 'https://drive.google.com/file/d/1S9-QdPoKB6gGSvdR-vOQYH3nR7eTo2TX/view?usp=sharing', // 原稿のURL
+      slidesUrl: 'https://drive.google.com/file/d/1OpZ4ll3vKTsqZydADv7jFOTpqUpjC07q/view?usp=sharing', // スライドのURL
     },
     2: {
       extendedDescription: '「〇ai」は、1週間のゲームジャムで開発したユニークなコンセプトの2Dアクションゲームです。プレイヤーは、画面上に表示される「〇ai」の〇に当てはまるアルファベットに触れ、単語を完成させることでキャラクターの姿が変化します。間違ったアルファベットに当たるとキャラクターが小さくなり、一定のサイズ以下になるとゲームオーバーです。瞬時の判断力と移動スキルが試される、スピーディで中毒性のあるゲームプレイが特徴です。',
@@ -61,6 +64,15 @@ function ProjectDetail() {
         </a>)}
         {project.videoUrl&&(<a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="button">
           動画を見る
+        </a>)}
+        {details?.conferenceUrl&&(<a href={details.conferenceUrl} target="_blank" rel="noopener noreferrer" className="button">
+          学会を見る
+        </a>)}
+        {details?.paperUrl&&(<a href={details.paperUrl} target="_blank" rel="noopener noreferrer" className="button">
+          原稿を読む
+        </a>)}
+        {details?.slidesUrl&&(<a href={details.slidesUrl} target="_blank" rel="noopener noreferrer" className="button">
+          スライドを見る
         </a>)}
       </div>
       <div className="project-detail-buttons">
