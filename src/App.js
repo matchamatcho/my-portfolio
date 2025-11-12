@@ -28,8 +28,8 @@ function App() {
                   <About />
                   <Projects />
                   <Publications />
-                  <CompetitiveProgramming />
                   <News />
+                  <CompetitiveProgramming />
                   <Skills />
                   {/* <Contact /> */}
                 </>
