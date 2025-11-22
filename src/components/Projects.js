@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 // このデータは他のファイルからも参照できるようにエクスポートしておきます
 export const myProjects = [
   {
-    id: 5,
-    title: 'CUI移動ゲーム',
-    description: 'C++を用いて作成したCUIゲームです。C++の機能の学習を目的としました。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
-    imageUrl: process.env.PUBLIC_URL + '/images/rightdown.png', // プロジェクトのスクリーンショットなどに差し替えてください
-    videoUrl:'https://drive.google.com/file/d/1Jb2TrvFOz4uPwrRVwsvxlDto0dq-Ak1n/view?usp=sharing'
+    id: 7,
+    title: 'BirdRacing',
+    description: '鳥を操作するゲームを作成しています。UE5で開発中です。',
+    imageUrl: process.env.PUBLIC_URL + '/images/birdracing.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    link:'https://github.com/matchamatcho/BirdRacing'
+
   },
+  
   {
     id: 1,
     title: 'VR頭部回転増幅ソフトウェア',
@@ -27,6 +29,14 @@ export const myProjects = [
     videoUrl:'https://drive.google.com/file/d/150wgRVDllgDNXIIyi78qSRkPMOep6D9f/view?usp=drive_link',
     unityRoomUrl:'https://unityroom.com/games/magario'
   },
+  {
+    id: 5,
+    title: 'CUI移動ゲーム',
+    description: 'C++を用いて作成したCUIゲームです。C++の機能の学習を目的としました。クラス継承、メモリアロケータ、ステート管理を意識して作成しました',
+    imageUrl: process.env.PUBLIC_URL + '/images/rightdown.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    videoUrl:'https://drive.google.com/file/d/1Jb2TrvFOz4uPwrRVwsvxlDto0dq-Ak1n/view?usp=sharing'
+  },
+  
   {
     id: 3,
     title: 'トラップゲーム',
@@ -51,14 +61,7 @@ export const myProjects = [
     link: 'https://github.com/matchamatcho/Kagamikun',
     unityRoomUrl:'https://unityroom.com/games/kagamikun'
   },
-  {
-    id: 7,
-    title: 'BirdRacing',
-    description: '鳥を操作するレースゲームを作成しています。UE5で開発中です。',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
-    link:'https://github.com/matchamatcho/BirdRacing'
-
-  },
+  
 ];
 
 function Projects() {
