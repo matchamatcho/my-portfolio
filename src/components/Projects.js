@@ -6,7 +6,7 @@ export const myProjects = [
   {
     id: 7,
     title: 'BirdRacing',
-    description: '鳥を操作するゲームを作成しています。UE5で開発中です。',
+    description: '鳥を操作してコインを\'取り\'ます。コインを取ると残り時間が増えます。',
     imageUrl: process.env.PUBLIC_URL + '/images/birdracing.png', // プロジェクトのスクリーンショットなどに差し替えてください
     link:'https://github.com/matchamatcho/BirdRacing',
     videoUrl:'https://drive.google.com/file/d/18M6nIJqntISqgwS8kY_F9gWG0rQi8idL/view?usp=sharing'

@@ -38,6 +38,10 @@ function ProjectDetail() {
     6: {
         extendedDescription: 'Apexでは敵の動きが激しく、狙いを定めるのが困難です。そこで、敵と同じように動くことで、敵の動きが小さく感じ、狙いやすくなる技術があります。このゲームは敵の動きに合わせてキャラクターを動かす練習をすることができます',
         technologies: ['Unity', 'C#'],
+    },
+    7:{
+      extendedDescription:'UE5でアセットを用いたり、アニメーションを使うことを目的として作りました。\nまた、PlayerControllerクラスや、GameStateBaseクラスを継承したクラスを作り、レベルに設定しました。\n適切にクラスを分け、それぞれの役割を持たせることで、コードのどこで何が行われているか分かりやすく、保守性が高くなると感じました。',
+      technologies: ['Unreal Engine 5', 'C++'],
     }
   };
 
@@ -50,7 +54,7 @@ function ProjectDetail() {
       <p>{project.description}</p>
       {details && (
         <>
-            <p>{details.extendedDescription}</p>
+            <p style={{ whiteSpace: 'pre-wrap' }}>{details.extendedDescription}</p>
             <h3>使用技術</h3>
             <ul>
                 {details.technologies.map(tech => <li key={tech}>{tech}</li>)}
