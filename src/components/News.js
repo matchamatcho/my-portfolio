@@ -4,9 +4,13 @@ const News = () => {
   const newsItems = [
     
     {
+      date: "2025/12",
+      title: "スクエア・エニックスのハッカソンに参加しました",
+    },{
       date: "2025/11",
       title: "JPHacks award dayに参加しました(ディップ株式会社賞, 三菱重工業株式会社賞, ロート製薬株式会社賞, Innovator認定, Best Audience Award, Best Hack Award)",
-    },{
+    },
+    {
       date: "2025/10",
       title: "JPHacks hack day 札幌会場に参加しました(株式会社ヤマレコ賞)",
     },
