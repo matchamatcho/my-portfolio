@@ -42,6 +42,10 @@ function ProjectDetail() {
     7:{
       extendedDescription:'UE5でアセットを用いたり、アニメーションを使うことを目的として作りました。\nまた、PlayerControllerクラスや、GameStateBaseクラスを継承したクラスを作り、レベルに設定しました。\n適切にクラスを分け、それぞれの役割を持たせることで、コードのどこで何が行われているか分かりやすく、保守性が高くなると感じました。',
       technologies: ['Unreal Engine 5', 'C++'],
+    },
+    8:{
+      extendedDescription:'重力の向きを変更したとき、変更後の重力系で移動や視点移動が正しく行われるように、クウォタニオンを用いて計算しました。\nC++コンポーネントをアクタにアタッチすることでギミックを実装していきました。',
+      technologies: ['Unreal Engine 5', 'C++'],
     }
   };
 
