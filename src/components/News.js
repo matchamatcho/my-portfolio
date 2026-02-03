@@ -8,7 +8,7 @@ const News = () => {
       title: "スクエア・エニックスのハッカソンに参加しました",
     },{
       date: "2025/11",
-      title: "JPHacks award dayに参加しました(ディップ株式会社賞, 三菱重工業株式会社賞, ロート製薬株式会社賞, Innovator認定, Best Audience Award, Best Hack Award)",
+      title: "JPHacks award dayに参加しました(Best Hack Award, Best Audience Award, Innovator認定, ディップ株式会社賞, 三菱重工業株式会社賞, ロート製薬株式会社賞)",
     },
     {
       date: "2025/10",
@@ -45,6 +45,10 @@ const News = () => {
     {
       date: "2024/11",
       title: "AtCoderで緑になりました",
+    },
+    {
+      date: "2023/08",
+      title: "ファミリーレストランでアルバイトを始めました",
     },
 
     

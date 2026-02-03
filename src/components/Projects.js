@@ -22,7 +22,7 @@ export const myProjects = [
   
   {
     id: 1,
-    title: 'VR頭部回転増幅ソフトウェア',
+    title: 'VR頭部回転増幅アプリ',
     description: 'Unityで制作しました。研究で実験をおこなうために作成しました。VRリダイレクション（頭部回転増幅）を使えます。',
     imageUrl: process.env.PUBLIC_URL + '/images/vrredirection.jpg', // プロジェクトのスクリーンショットなどに差し替えてください
     link: 'https://github.com/matchamatcho/projectAHR',
