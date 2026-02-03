@@ -7,7 +7,7 @@ export const myProjects = [
     id: 8,
     title: 'GravityFall(開発中)',
     description: '重力の向きを変更しながらゴールを目指します。',
-    imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
+    // imageUrl: process.env.PUBLIC_URL + '/images/tmp.png', // プロジェクトのスクリーンショットなどに差し替えてください
  
   },
   {
